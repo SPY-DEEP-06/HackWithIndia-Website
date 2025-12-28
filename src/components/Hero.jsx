@@ -157,10 +157,16 @@ const Hero = () => {
                         <h1 className="special-font hero-heading text-blue-100">
                             HACK<b>W</b>ITH<b>I</b>NDIA
                         </h1>
+                        import GlassyButton from "./ui/glassy-button";
+
+                        // ... inside component ...
+
                         <p className="mb-5 max-w-64 text-center font-robert text-blue-100">
                             BVUDET - NM CHAPTER <br /> Innovate. Create. Elevate.
                         </p>
-                        <Button id="watch-trailer" title="Join Us" leftIcon={<TiLocationArrow />} containerClass="!bg-yellow-300 flex-center gap-1" />
+                        <GlassyButton id="watch-trailer">
+                            <TiLocationArrow className="text-xl mr-1" /> Join Us
+                        </GlassyButton>
                     </div>
                 </div>
 
