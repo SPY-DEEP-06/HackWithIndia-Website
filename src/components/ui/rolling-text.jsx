@@ -81,10 +81,12 @@ function CharacterColumn({
     const isOddPosition = characterIndex % 2 === 0;
     const shouldRollFromBottom = animationPattern === "alternating" && !isOddPosition;
 
-    // Use percentages for translation to avoid pixel calculation issues with fluid fonts
-    // We scroll deeply to the end of the duplicate list
-    const initialY = shouldRollFromBottom ? `-${(duplicateCount - 1) * 100}%` : "0%";
-    const finalY = shouldRollFromBottom ? "0%" : `-${(duplicateCount - 1) * 100}%`;
+    // Use em for translation to match line-height exactly
+    // 0em shows the first character.
+    // -(duplicateCount - 1)em shows the last character.
+    const maxScroll = duplicateCount - 1;
+    const initialY = shouldRollFromBottom ? `-${maxScroll}em` : "0em";
+    const finalY = shouldRollFromBottom ? "0em" : `-${maxScroll}em`;
 
     return (
         <div
