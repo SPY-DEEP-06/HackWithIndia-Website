@@ -28,7 +28,7 @@ export function EventPathCalendar() {
     // Initialize from LocalStorage or empty array
     const [events, setEvents] = useState(() => {
         try {
-            const saved = localStorage.getItem("hwi-events-data-v1");
+            const saved = localStorage.getItem("hwi-events-data-v2");
             if (saved) {
                 return JSON.parse(saved, (key, value) => {
                     if (key === 'date') return new Date(value);
@@ -68,7 +68,7 @@ export function EventPathCalendar() {
     ])).sort((a, b) => b - a);
 
     useEffect(() => {
-        localStorage.setItem("hwi-events-data-v1", JSON.stringify(events));
+        localStorage.setItem("hwi-events-data-v2", JSON.stringify(events));
     }, [events]);
 
     const handleAdminLogin = () => {
