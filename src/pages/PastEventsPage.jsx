@@ -62,12 +62,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img
-                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=500"
+                            src="/img/pre-event-1.jpg"
                             alt="Pre-event"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=500"
+                            src="/img/pre-event-2.jpg"
                             alt="Mentorship"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
