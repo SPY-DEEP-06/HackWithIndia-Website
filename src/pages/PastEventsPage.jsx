@@ -13,7 +13,7 @@ const PastEventsPage = () => {
                         <span className="block text-sm text-yellow-400 mb-2 font-bold uppercase tracking-wider">Upcoming • Feb 2026 (1st Week)</span>
                         Get ready for the next evolution! A massive 24+ hour hackathon experience is incoming. Prepare to push your limits, innovate without boundaries, and compete with the best.
                         <br /><br />
-                        <span className="text-red-500 font-bold italic blink-urgent">Registration window will open shortly !!</span>
+                        <span className="font-bold italic neon-red-pulse">Registration window will open shortly !!</span>
                     </p>
                 </div>
             ),

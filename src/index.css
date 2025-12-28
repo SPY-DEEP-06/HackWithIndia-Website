@@ -490,12 +490,20 @@ body {
   }
 }
 
-.blink-urgent {
-  animation: blink-urgent 1s steps(2, start) infinite;
+.neon-red-pulse {
+  color: #ff3333;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6);
+  animation: neon-pulse-fast 0.5s ease-in-out infinite alternate;
 }
 
-@keyframes blink-urgent {
+@keyframes neon-pulse-fast {
+  from {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
+  }
+
   to {
-    visibility: hidden;
+    opacity: 0.6;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5);
   }
 }
