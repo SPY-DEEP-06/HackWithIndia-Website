@@ -11,7 +11,7 @@ const PastEventsPage = () => {
                         <span className="font-bold text-xl block mb-2 text-violet-300 font-zentry uppercase tracking-wide">HackBattle 1.0</span>
                         Our internal hackathon exclusively for freshers. A 24-hour marathon of innovation, code, and caffeine, witnessing over 150+ participants building solutions for the future.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-4 will-change-transform">
                         <img
                             src="https://images.unsplash.com/photo-1504384308090-c54be3855833?auto=format&fit=crop&q=80&w=500"
                             alt="HackBattle Crowd"

@@ -97,7 +97,7 @@ const Gallery = () => {
                 <MotionSection className="min-h-[90vh] flex flex-col justify-center items-center gap-12 mb-20 origin-center scale-90 md:scale-100">
 
                     {/* Top Ambient Slider (Reversed) */}
-                    <div className="w-full opacity-60 hover:opacity-100 transition-opacity duration-700">
+                    <div className="w-full opacity-60 hover:opacity-100 transition-opacity duration-700 will-change-transform">
                         <InfiniteSlider direction="horizontal" reverse duration={60} gap={24}>
                             {sliderImages.map((image, i) => (
                                 <div key={i} className="aspect-video w-[250px] md:w-[350px] rounded-lg overflow-hidden opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
@@ -113,7 +113,7 @@ const Gallery = () => {
                     </div>
 
                     {/* Bottom Ambient Slider (Normal) */}
-                    <div className="w-full opacity-60 hover:opacity-100 transition-opacity duration-700">
+                    <div className="w-full opacity-60 hover:opacity-100 transition-opacity duration-700 will-change-transform">
                         <InfiniteSlider direction="horizontal" duration={60} gap={24}>
                             {sliderImages.map((image, i) => (
                                 <div key={i} className="aspect-video w-[250px] md:w-[350px] rounded-lg overflow-hidden opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
