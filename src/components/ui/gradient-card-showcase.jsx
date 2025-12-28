@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { DiGithubBadge } from "react-icons/di";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useInView } from "framer-motion";
 
-const GradientCard = ({ name, role, desc, img, gradientFrom, gradientTo, github, linkedin }) => {
+const GradientCard = ({ name, role, desc, img, gradientFrom, gradientTo, github, linkedin, instagram }) => {
     const ref = useRef(null);
     const [isTouch, setIsTouch] = React.useState(false);
 
@@ -89,6 +89,16 @@ const GradientCard = ({ name, role, desc, img, gradientFrom, gradientTo, github,
                             className="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#0077b5] transition-all duration-300 transform hover:scale-110"
                         >
                             <FaLinkedin size={20} />
+                        </a>
+                    )}
+                    {instagram && (
+                        <a
+                            href={instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#E1306C] transition-all duration-300 transform hover:scale-110"
+                        >
+                            <FaInstagram size={20} />
                         </a>
                     )}
                 </div>
