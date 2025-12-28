@@ -91,8 +91,8 @@ const Team = () => {
             img: aayushImg,
             gradientFrom: "#ffbc00", // Gold
             gradientTo: "#ff0058",   // Pink
-            github: "#",
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/aayush-pandey-388072295/",
+            instagram: "https://www.instagram.com/i_aayushp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         },
         {
             name: "Deepanshu Ghosalkar",
