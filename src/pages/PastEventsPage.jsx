@@ -86,13 +86,13 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img
-                            src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=500"
-                            alt="Orientation"
+                            src="/img/orientation-1.jpg"
+                            alt="Orientation Crowd"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=500"
-                            alt="Workshop"
+                            src="/img/orientation-2.jpg"
+                            alt="Orientation Activity"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                     </div>
