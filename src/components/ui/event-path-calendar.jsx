@@ -344,9 +344,10 @@ export function EventPathCalendar() {
                         </Popover>
                     ))}
                 </div>
-                ) : (
-                <div className="text-center py-10 text-neutral-600 italic">No events found for this filter.</div>
-            )}
             </div>
+        ) : (
+            <div className="text-center py-10 text-neutral-600 italic">No events found for this filter.</div>
+        )
+    }
         )
 }
