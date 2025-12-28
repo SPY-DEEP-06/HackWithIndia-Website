@@ -489,3 +489,13 @@ body {
     width: 30vw;
   }
 }
+
+.blink-urgent {
+  animation: blink-urgent 1s steps(2, start) infinite;
+}
+
+@keyframes blink-urgent {
+  to {
+    visibility: hidden;
+  }
+}
