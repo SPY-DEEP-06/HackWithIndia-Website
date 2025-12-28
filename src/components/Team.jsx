@@ -237,10 +237,11 @@ const Team = () => {
                     <RollingText
                         text="OUR TEAM"
                         autoPlay={true}
-                        rollDuration={1.2}
-                        duplicateCount={4}
-                        staggerDelay={0.05}
+                        rollDuration={1.8}
+                        duplicateCount={6}
+                        staggerDelay={0.1}
                         blurIntensity={2}
+                        animationPattern="alternating"
                         textColor="#000000"
                         font={{
                             fontSize: "clamp(3rem, 6vw, 4.5rem)",
