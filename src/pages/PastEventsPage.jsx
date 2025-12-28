@@ -1,8 +1,23 @@
 import { Timeline } from "../components/ui/timeline";
 import { EventPathCalendar } from "../components/ui/event-path-calendar";
+import { FlickerText } from "../components/ui/flicker-text";
 
 const PastEventsPage = () => {
     const data = [
+        {
+            title: "Feb 2026",
+            content: (
+                <div>
+                    <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8 leading-relaxed">
+                        <FlickerText text="HackWithMumbai 2.0 Hackathon" className="font-bold text-3xl block mb-2 text-cyan-400 font-zentry uppercase tracking-wide" />
+                        <span className="block text-sm text-yellow-400 mb-2 font-bold uppercase tracking-wider">Upcoming • Feb 2026 (1st Week)</span>
+                        Get ready for the next evolution! A massive 24+ hour hackathon experience is incoming. Prepare to push your limits, innovate without boundaries, and compete with the best.
+                        <br /><br />
+                        <span className="text-green-400 font-bold italic blink-animation">Registration window will open shortly !!</span>
+                    </p>
+                </div>
+            ),
+        },
         {
             title: "Sep 2025",
             content: (
