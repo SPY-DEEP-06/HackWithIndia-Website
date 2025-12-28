@@ -36,7 +36,13 @@ export function EventPathCalendar() {
                 });
             }
         } catch (e) { console.error("Failed to load events", e); }
-        return [];
+        return [
+            { id: 1, title: "Learn IT Tour", date: new Date(2025, 6, 16) }, // July
+            { id: 2, title: "Orientation Ceremony", date: new Date(2025, 7, 23) }, // Aug
+            { id: 3, title: "Pre-event HackWithMumbai", date: new Date(2025, 8, 15) }, // Sep
+            { id: 4, title: "HackWithMumbai Hackathon", date: new Date(2025, 8, 21) }, // Sep
+            { id: 5, title: "Build IT Tour 2.0", date: new Date(2025, 8, 27) }, // Sep
+        ];
     });
 
     const [title, setTitle] = useState("")
