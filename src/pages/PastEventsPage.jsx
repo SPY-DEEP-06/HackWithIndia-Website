@@ -14,12 +14,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 will-change-transform">
                         <img
-                            src="/img/build-it-tour-1.jpg"
+                            src="/img/pastevents/build-it-tour-1.jpg"
                             alt="Build IT Tour"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="/img/build-it-tour-2.jpg"
+                            src="/img/pastevents/build-it-tour-2.jpg"
                             alt="Seminar"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
@@ -38,12 +38,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img
-                            src="/img/hackwithmumbai-1.jpg"
+                            src="/img/pastevents/hackwithmumbai-1.jpg"
                             alt="HackWithMumbai"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="/img/hackwithmumbai-2.jpg"
+                            src="/img/pastevents/hackwithmumbai-2.jpg"
                             alt="Coding Team"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
@@ -62,12 +62,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img
-                            src="/img/pre-event-1.jpg"
+                            src="/img/pastevents/pre-event-1.jpg"
                             alt="Pre-event"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="/img/pre-event-2.jpg"
+                            src="/img/pastevents/pre-event-2.jpg"
                             alt="Mentorship"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
@@ -86,12 +86,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img
-                            src="/img/orientation-1.jpg"
+                            src="/img/pastevents/orientation-1.jpg"
                             alt="Orientation Crowd"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="/img/orientation-2.jpg"
+                            src="/img/pastevents/orientation-2.jpg"
                             alt="Orientation Activity"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
@@ -110,17 +110,17 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <img
-                            src="/img/learn-it-tour-1.jpg"
+                            src="/img/pastevents/learn-it-tour-1.jpg"
                             alt="Learn IT Tour Group"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="/img/learn-it-tour-2.jpg"
+                            src="/img/pastevents/learn-it-tour-2.jpg"
                             alt="Session"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="/img/learn-it-tour-3.jpg"
+                            src="/img/pastevents/learn-it-tour-3.jpg"
                             alt="Classroom"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
