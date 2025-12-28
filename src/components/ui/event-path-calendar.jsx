@@ -28,7 +28,7 @@ export function EventPathCalendar() {
     // Initialize from LocalStorage or empty array
     const [events, setEvents] = useState(() => {
         try {
-            const saved = localStorage.getItem("hwi-events");
+            const saved = localStorage.getItem("hwi-events-data-v1");
             if (saved) {
                 return JSON.parse(saved, (key, value) => {
                     if (key === 'date') return new Date(value);
@@ -47,7 +47,7 @@ export function EventPathCalendar() {
 
     const [title, setTitle] = useState("")
     const [selectedDate, setSelectedDate] = useState(new Date())
-    const [filter, setFilter] = useState("last_month")
+    const [filter, setFilter] = useState("year")
 
     // Admin State
     const [isAdmin, setIsAdmin] = useState(false)
@@ -56,7 +56,7 @@ export function EventPathCalendar() {
     // Additional Filter States
     const [rangeStart, setRangeStart] = useState(new Date(new Date().setMonth(new Date().getMonth() - 1)))
     const [rangeEnd, setRangeEnd] = useState(new Date())
-    const [selectedYear, setSelectedYear] = useState(new Date().getFullYear().toString())
+    const [selectedYear, setSelectedYear] = useState("2025")
 
     const currentYear = new Date().getFullYear();
     // Get unique years from events plus current/next year
@@ -67,7 +67,7 @@ export function EventPathCalendar() {
     ])).sort((a, b) => b - a);
 
     useEffect(() => {
-        localStorage.setItem("hwi-events", JSON.stringify(events));
+        localStorage.setItem("hwi-events-data-v1", JSON.stringify(events));
     }, [events]);
 
     const handleAdminLogin = () => {
