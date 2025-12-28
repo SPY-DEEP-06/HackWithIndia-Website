@@ -39,6 +39,16 @@ body {
 }
 
 @layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
   .nav-hover-btn {
     position: relative;
     margin-left: 2.5rem;
