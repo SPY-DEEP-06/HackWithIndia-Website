@@ -13,6 +13,7 @@ import krishnakantImg from "@/assets/img/heads/krishnakant.png";
 import aryanImg from "@/assets/img/heads/aryan.png";
 import ravikishanImg from "@/assets/img/heads/ravikishan.png";
 import GradientCardShowcase from "@/components/ui/gradient-card-showcase";
+import RollingText from "./ui/rolling-text";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -232,9 +233,24 @@ const Team = () => {
     return (
         <section ref={containerRef} className="bg-zinc-50 py-24 text-black min-h-screen">
             <div className="container mx-auto px-10">
-                <h2 className="team-header mb-10 font-zentry text-6xl uppercase leading-[0.9] text-black text-center">
-                    Our <b>T</b>eam
-                </h2>
+                <div className="team-header mb-10 h-24 flex items-center justify-center overflow-hidden">
+                    <RollingText
+                        text="OUR TEAM"
+                        autoPlay={true}
+                        rollDuration={1.2}
+                        duplicateCount={4}
+                        staggerDelay={0.05}
+                        blurIntensity={2}
+                        textColor="#000000"
+                        font={{
+                            fontSize: "clamp(3rem, 6vw, 4.5rem)",
+                            fontFamily: '"zentry", sans-serif',
+                            fontWeight: 900,
+                            lineHeight: "1em",
+                            letterSpacing: "0em"
+                        }}
+                    />
+                </div>
 
                 {/* New Gradient Skew Cards Component */}
                 <div className="team-grid">
