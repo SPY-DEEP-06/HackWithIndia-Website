@@ -42,12 +42,13 @@ export function EventPathCalendar() {
             { id: 3, title: "Pre-event HackWithMumbai", date: new Date(2025, 8, 15) }, // Sep
             { id: 4, title: "HackWithMumbai Hackathon", date: new Date(2025, 8, 21) }, // Sep
             { id: 5, title: "Build IT Tour 2.0", date: new Date(2025, 8, 27) }, // Sep
+            { id: 6, title: "HackWithMumbai 2.0 Hackathon", date: new Date(2026, 1, 15) }, // Feb 2026 (Approx)
         ];
     });
 
     const [title, setTitle] = useState("")
     const [selectedDate, setSelectedDate] = useState(new Date())
-    const [filter, setFilter] = useState("year")
+    const [filter, setFilter] = useState("future")
 
     // Admin State
     const [isAdmin, setIsAdmin] = useState(false)
