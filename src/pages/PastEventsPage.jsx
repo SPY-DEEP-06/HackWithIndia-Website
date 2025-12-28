@@ -38,12 +38,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <img
-                            src="https://images.unsplash.com/photo-1504384308090-c54be3855833?auto=format&fit=crop&q=80&w=500"
+                            src="/img/hackwithmumbai-1.jpg"
                             alt="HackWithMumbai"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=500"
+                            src="/img/hackwithmumbai-2.jpg"
                             alt="Coding Team"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
