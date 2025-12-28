@@ -5,23 +5,23 @@ import { useInView } from "framer-motion";
 
 const GradientCard = ({ name, role, desc, img, gradientFrom, gradientTo, github, linkedin }) => {
     const ref = useRef(null);
-    // Trigger when 50% of the card is visible in the viewport
-    const isInView = useInView(ref, { margin: "-40% 0px -40% 0px" });
+    // Trigger earlier (at 20% visibility) for smoother feeling on scroll
+    const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" });
 
     return (
         <div
             ref={ref}
-            className={`group relative w-[300px] h-[380px] m-[10px] transition-all duration-500 ${isInView ? "active" : ""}`}
+            className={`group relative w-[300px] h-[380px] m-[10px] transition-all duration-700 ease-out will-change-transform ${isInView ? "active" : ""}`}
         >
             {/* Skewed gradient panels */}
             <span
-                className="absolute top-0 left-[50px] w-1/2 h-full rounded-lg transform skew-x-[15deg] transition-all duration-500 group-hover:skew-x-0 group-hover:left-[20px] group-hover:w-[calc(100%-40px)] group-[.active]:skew-x-0 group-[.active]:left-[20px] group-[.active]:w-[calc(100%-40px)]"
+                className="absolute top-0 left-[50px] w-1/2 h-full rounded-lg transform skew-x-[15deg] transition-all duration-700 ease-out group-hover:skew-x-0 group-hover:left-[20px] group-hover:w-[calc(100%-40px)] group-[.active]:skew-x-0 group-[.active]:left-[20px] group-[.active]:w-[calc(100%-40px)]"
                 style={{
                     background: `linear-gradient(315deg, ${gradientFrom}, ${gradientTo})`,
                 }}
             />
             <span
-                className="absolute top-0 left-[50px] w-1/2 h-full rounded-lg transform skew-x-[15deg] blur-[30px] transition-all duration-500 group-hover:skew-x-0 group-hover:left-[20px] group-hover:w-[calc(100%-40px)] group-[.active]:skew-x-0 group-[.active]:left-[20px] group-[.active]:w-[calc(100%-40px)]"
+                className="absolute top-0 left-[50px] w-1/2 h-full rounded-lg transform skew-x-[15deg] blur-[30px] transition-all duration-700 ease-out group-hover:skew-x-0 group-hover:left-[20px] group-hover:w-[calc(100%-40px)] group-[.active]:skew-x-0 group-[.active]:left-[20px] group-[.active]:w-[calc(100%-40px)]"
                 style={{
                     background: `linear-gradient(315deg, ${gradientFrom}, ${gradientTo})`,
                 }}
@@ -29,12 +29,12 @@ const GradientCard = ({ name, role, desc, img, gradientFrom, gradientTo, github,
 
             {/* Animated blurs */}
             <span className="pointer-events-none absolute inset-0 z-10">
-                <span className="absolute top-0 left-0 w-0 h-0 rounded-lg opacity-0 bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.08)] transition-all duration-100 animate-blob group-hover:top-[-40px] group-hover:left-[40px] group-hover:w-[80px] group-hover:h-[80px] group-hover:opacity-100 group-[.active]:top-[-40px] group-[.active]:left-[40px] group-[.active]:w-[80px] group-[.active]:h-[80px] group-[.active]:opacity-100" />
+                <span className="absolute top-0 left-0 w-0 h-0 rounded-lg opacity-0 bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.08)] transition-all duration-500 animate-blob group-hover:top-[-40px] group-hover:left-[40px] group-hover:w-[80px] group-hover:h-[80px] group-hover:opacity-100 group-[.active]:top-[-40px] group-[.active]:left-[40px] group-[.active]:w-[80px] group-[.active]:h-[80px] group-[.active]:opacity-100" />
                 <span className="absolute bottom-0 right-0 w-0 h-0 rounded-lg opacity-0 bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.08)] transition-all duration-500 animate-blob group-hover:bottom-[-40px] group-hover:right-[40px] group-hover:w-[80px] group-hover:h-[80px] group-hover:opacity-100 group-[.active]:bottom-[-40px] group-[.active]:right-[40px] group-[.active]:w-[80px] group-[.active]:h-[80px] group-[.active]:opacity-100" style={{ animationDelay: '1s' }} />
             </span>
 
             {/* Content */}
-            <div className="relative z-20 left-0 h-full flex flex-col justify-between p-[20px_40px] bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] shadow-lg rounded-lg text-white transition-all duration-500 group-hover:left-[-15px] group-hover:p-[40px_40px] border border-white/10 group-hover:border-white/20 group-[.active]:left-[-15px] group-[.active]:p-[40px_40px] group-[.active]:border-white/20">
+            <div className="relative z-20 left-0 h-full flex flex-col justify-between p-[20px_40px] bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] shadow-lg rounded-lg text-white transition-all duration-700 ease-out group-hover:left-[-15px] group-hover:p-[40px_40px] border border-white/10 group-hover:border-white/20 group-[.active]:left-[-15px] group-[.active]:p-[40px_40px] group-[.active]:border-white/20">
 
                 {/* Top Section: Name & Role */}
                 <div className="relative z-30 transition-all duration-500 group-hover:z-10 group-hover:opacity-90 group-hover:scale-95 group-[.active]:z-10 group-[.active]:opacity-90 group-[.active]:scale-95"> {/* Text drops BACK */}

@@ -201,26 +201,31 @@ const Team = () => {
     const containerRef = useRef(null);
 
     useGSAP(() => {
-        gsap.from(".team-header", {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".team-header",
-                start: "top 90%",
-            }
-        });
+        // Only run elaborate entrance animations on desktop to keep mobile scroll silky smooth
+        const mm = gsap.matchMedia();
 
-        gsap.from(".team-grid", {
-            y: 100,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".team-grid",
-                start: "top 80%",
-            }
+        mm.add("(min-width: 768px)", () => {
+            gsap.from(".team-header", {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".team-header",
+                    start: "top 90%",
+                }
+            });
+
+            gsap.from(".team-grid", {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".team-grid",
+                    start: "top 80%",
+                }
+            });
         });
     }, { scope: containerRef });
 
