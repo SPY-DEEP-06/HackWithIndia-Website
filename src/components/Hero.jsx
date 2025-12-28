@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -8,8 +9,6 @@ import video1 from "../assets/files/hero-1.mp4";
 import video2 from "../assets/files/hero-2.mp4";
 import video3 from "../assets/files/hero-3.mp4";
 import video4 from "../assets/files/hero-4.mp4";
-
-import GlassyButton from "./ui/glassy-button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -161,9 +160,7 @@ const Hero = () => {
                         <p className="mb-5 max-w-64 text-center font-robert text-blue-100">
                             BVUDET - NM CHAPTER <br /> Innovate. Create. Elevate.
                         </p>
-                        <GlassyButton id="watch-trailer">
-                            <TiLocationArrow className="text-xl mr-1" /> Join Us
-                        </GlassyButton>
+                        <Button id="watch-trailer" title="Join Us" leftIcon={<TiLocationArrow />} containerClass="!bg-yellow-300 flex-center gap-1" />
                     </div>
                 </div>
 

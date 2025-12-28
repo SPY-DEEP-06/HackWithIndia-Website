@@ -5,13 +5,27 @@ import { useInView } from "framer-motion";
 
 const GradientCard = ({ name, role, desc, img, gradientFrom, gradientTo, github, linkedin }) => {
     const ref = useRef(null);
+    const [isTouch, setIsTouch] = React.useState(false);
+
+    React.useEffect(() => {
+        const checkTouch = () => {
+            setIsTouch(window.matchMedia("(hover: none) and (pointer: coarse)").matches);
+        };
+        checkTouch();
+        window.addEventListener('resize', checkTouch);
+        return () => window.removeEventListener('resize', checkTouch);
+    }, []);
+
     // Trigger earlier (at 20% visibility) for smoother feeling on scroll
     const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" });
+
+    // Only apply active state automatically on touch devices
+    const isActive = isTouch && isInView;
 
     return (
         <div
             ref={ref}
-            className={`group relative w-[300px] h-[380px] m-[10px] transition-all duration-700 ease-out will-change-transform ${isInView ? "active" : ""}`}
+            className={`group relative w-[300px] h-[380px] m-[10px] transition-all duration-700 ease-out will-change-transform ${isActive ? "active" : ""}`}
         >
             {/* Skewed gradient panels */}
             <span
