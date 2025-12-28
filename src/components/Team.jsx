@@ -95,15 +95,15 @@ const Team = () => {
             linkedin: "#"
         },
         {
-            // ... other members truncated for brevity, but logically preserved
             name: "Deepanshu Ghosalkar",
             role: "Tech Lead",
             desc: "Mastermind behind the technical infrastructure.",
             img: deepanshuImg,
             gradientFrom: "#03a9f4", // Blue
             gradientTo: "#ff0058",   // Pink
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/SPY-DEEP-06",
+            linkedin: "https://www.linkedin.com/in/deepanshu-ghosalkar-deep/",
+            instagram: "http://instagram.com/deep_ghosalkar_"
         },
         {
             name: "Ansh Verma",
@@ -112,8 +112,9 @@ const Team = () => {
             img: anshImg,
             gradientFrom: "#4dff03", // Green
             gradientTo: "#00d0ff",   // Cyan
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/verma07ansh",
+            linkedin: "https://www.linkedin.com/in/ansh-verma-37504b2b7/",
+            instagram: "https://www.instagram.com/verma_07ansh"
         },
         {
             name: "Atharva Achare",
@@ -122,9 +123,10 @@ const Team = () => {
             img: atharvaImg,
             gradientFrom: "#7928ca", // Purple
             gradientTo: "#ff0080",   // Magenta
-            github: "#",
-            linkedin: "#",
-            titleStyle: { paddingBottom: '0px' } // Reduced padding to lower text
+            github: "https://github.com/atharvachare",
+            linkedin: "https://www.linkedin.com/in/atharva-achare-089582319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/atharva_achare?igsh=cmtwenRiNDdndDJ0&utm_source=qr",
+            titleStyle: { paddingBottom: '0px' }
         },
         {
             name: "Tanvi Patil",
@@ -133,8 +135,8 @@ const Team = () => {
             img: tanviImg,
             gradientFrom: "#ff4b1f", // Orange
             gradientTo: "#ff9068",   // Salmon
-            github: "#",
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/tanvi-patil-568540322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/heyy.tanv?igsh=MWVxamR2OGZyMms0Yw%3D%3D&utm_source=qr"
         },
         {
             name: "Aryan Naik",
@@ -143,8 +145,8 @@ const Team = () => {
             img: aryanImg,
             gradientFrom: "#00c6ff", // Light Blue
             gradientTo: "#0072ff",   // Royal Blue
-            github: "#",
-            linkedin: "#"
+            linkedin: "https://www.linkedin.com/in/aryan-naik-925000379?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+            instagram: "https://www.instagram.com/michtoaryan?igsh=bmw5enRzMW9leDQ3"
         },
         {
             name: "Ravikishan Singh",
@@ -153,8 +155,9 @@ const Team = () => {
             img: ravikishanImg,
             gradientFrom: "#bc4e9c", // Pink
             gradientTo: "#f80759",   // Red-Pink
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/RavikishanSingh",
+            linkedin: "https://www.linkedin.com/in/ravikishan-singh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            instagram: "https://www.instagram.com/singh_ravikishan23?igsh=eDFkM2YzN2t3Y2Fl"
         },
         {
             name: "Khushi Chowta",
@@ -163,8 +166,9 @@ const Team = () => {
             img: khushiImg,
             gradientFrom: "#f12711", // Red
             gradientTo: "#f5af19",   // Yellow
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/khushichowta0404",
+            linkedin: "https://www.linkedin.com/in/khushi-chowta-397446376?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+            instagram: "https://www.instagram.com/_simp.ly_khushi_?utm_source=qr&igsh=aWJoYnE2OWRjbWUz"
         },
         {
             name: "Krishnakant Sharma",
@@ -173,8 +177,9 @@ const Team = () => {
             img: krishnakantImg,
             gradientFrom: "#11998e", // Teal
             gradientTo: "#38ef7d",   // Lime
-            github: "#",
-            linkedin: "#",
+            github: "https://github.com/Krishna-Techstar",
+            linkedin: "https://www.linkedin.com/in/krishnakant-sharma-23p/",
+            instagram: "https://www.instagram.com/_krsna_23_/",
             imgStyle: { transform: 'scale(1.35)', bottom: '-15px' }
         },
         {
@@ -184,8 +189,8 @@ const Team = () => {
             img: krushaliImg,
             gradientFrom: "#8e2de2", // Purple
             gradientTo: "#4a00e0",   // Violet
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/krushali-borhade",
+            instagram: "https://www.instagram.com/_lil_miss_sillyy_?igsh=bTBpb3MwNjczdG1q"
         },
         {
             name: "Aakanksha Mishra",
@@ -194,8 +199,9 @@ const Team = () => {
             img: aakankshaImg,
             gradientFrom: "#ec008c", // Rose
             gradientTo: "#fc6767",   // Coral
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/aaka1412",
+            linkedin: "https://www.linkedin.com/in/aakanksha-mishra-3a0178346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            instagram: "https://www.instagram.com/_.aakanksha14_?igsh=MWZkNWVzbG5kanFubg=="
         },
     ];
 
