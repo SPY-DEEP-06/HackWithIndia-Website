@@ -14,12 +14,12 @@ const PastEventsPage = () => {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 will-change-transform">
                         <img
-                            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=500"
+                            src="/img/build-it-tour-1.jpg"
                             alt="Build IT Tour"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=500"
+                            src="/img/build-it-tour-2.jpg"
                             alt="Seminar"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
