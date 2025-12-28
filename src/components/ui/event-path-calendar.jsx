@@ -250,104 +250,99 @@ export function EventPathCalendar() {
                     </Button>
                 )}
             </div>
-        </div>
+            {/* Add Event Form (Admin Only) */}
+            {isAdmin && (
+                <Card className="p-2 bg-zinc-900 border-white/10 mt-6">
+                    <CardContent>
+                        <div className="flex flex-wrap items-end gap-4">
+                            {/* Event Title */}
+                            <div className="flex-1 min-w-[200px]">
+                                <Label className="text-neutral-400">New Event Title</Label>
+                                <Input
+                                    placeholder="Enter event title"
+                                    value={title}
+                                    onChange={(e) => setTitle(e.target.value)}
+                                    className="bg-black border-white/20 text-white mt-1"
+                                />
+                            </div>
 
-            {/* Add Event Form (Admin Only) */ }
-    {
-        isAdmin && (
-            <Card className="p-2 bg-zinc-900 border-white/10">
-                <CardContent>
-                    <div className="flex flex-wrap items-end gap-4">
-                        {/* Event Title */}
-                        <div className="flex-1 min-w-[200px]">
-                            <Label className="text-neutral-400">New Event Title</Label>
-                            <Input
-                                placeholder="Enter event title"
-                                value={title}
-                                onChange={(e) => setTitle(e.target.value)}
-                                className="bg-black border-white/20 text-white mt-1"
-                            />
+                            {/* Date Picker */}
+                            <div className="flex flex-col">
+                                <Label className="text-neutral-400">Date</Label>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <Button variant="outline" className="mt-1 w-[200px] justify-start text-left font-normal bg-black border-white/20 text-white hover:bg-zinc-800 hover:text-white">
+                                            {selectedDate ? selectedDate.toDateString() : "Pick a date"}
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0 bg-zinc-900 border-white/20 text-white">
+                                        <Calendar
+                                            mode="single"
+                                            selected={selectedDate}
+                                            onSelect={setSelectedDate}
+                                            className="bg-zinc-900 text-white"
+                                            classNames={{
+                                                day_selected: "bg-violet-600 text-white hover:bg-violet-600 hover:text-white focus:bg-violet-600 focus:text-white",
+                                                day_today: "bg-zinc-800 text-white",
+                                            }}
+                                        />
+                                    </PopoverContent>
+                                </Popover>
+                            </div>
+
+                            {/* Add Button */}
+                            <div className="mb-[2px]">
+                                <Button onClick={addEvent} className="bg-white text-black hover:bg-neutral-200">Add Event</Button>
+                            </div>
                         </div>
+                    </CardContent>
+                </Card>
+            )}
 
-                        {/* Date Picker */}
-                        <div className="flex flex-col">
-                            <Label className="text-neutral-400">Date</Label>
-                            <Popover>
+            {/* Event Path */}
+            {sortedEvents.length > 0 ? (
+                <div className="w-full h-48 overflow-x-auto border border-white/10 bg-black/50 rounded-lg backdrop-blur-sm custom-scrollbar mt-6">
+                    <div className="relative min-w-full w-max h-full flex items-center gap-12 px-12 justify-center">
+                        {/* Horizontal path line */}
+                        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/20 -translate-y-1/2"></div>
+
+                        {sortedEvents.map((ev, idx) => (
+                            <Popover key={ev.id}>
                                 <PopoverTrigger asChild>
-                                    <Button variant="outline" className="mt-1 w-[200px] justify-start text-left font-normal bg-black border-white/20 text-white hover:bg-zinc-800 hover:text-white">
-                                        {selectedDate ? selectedDate.toDateString() : "Pick a date"}
-                                    </Button>
+                                    <div className="event-dot relative flex flex-col items-center cursor-pointer group z-10 transition-transform hover:scale-110">
+                                        <div className="w-8 h-8 rounded-full bg-black border-2 border-white group-hover:border-violet-400 group-hover:bg-violet-950 mb-3 flex items-center justify-center text-white text-xs font-bold transition-colors">
+                                            {idx + 1}
+                                        </div>
+                                        <span className="text-xs text-neutral-400 group-hover:text-white whitespace-nowrap bg-black/80 px-2 py-1 rounded">{ev.date.toLocaleDateString()}</span>
+                                    </div>
                                 </PopoverTrigger>
-                                <PopoverContent className="w-auto p-0 bg-zinc-900 border-white/20 text-white">
-                                    <Calendar
-                                        mode="single"
-                                        selected={selectedDate}
-                                        onSelect={setSelectedDate}
-                                        className="bg-zinc-900 text-white"
-                                        classNames={{
-                                            day_selected: "bg-violet-600 text-white hover:bg-violet-600 hover:text-white focus:bg-violet-600 focus:text-white",
-                                            day_today: "bg-zinc-800 text-white",
-                                        }}
-                                    />
+                                <PopoverContent className="w-64 bg-zinc-900 border-white/20 text-white p-4">
+                                    <div className="flex flex-col gap-2">
+                                        <span className="font-bold text-lg text-violet-300 font-zentry uppercase">{ev.title}</span>
+                                        <span className="text-sm text-neutral-400 border-b border-white/10 pb-2">{ev.date.toDateString()}</span>
+
+                                        {isAdmin && (
+                                            <div className="pt-2 flex justify-end">
+                                                <Button
+                                                    variant="destructive"
+                                                    size="sm"
+                                                    onClick={() => deleteEvent(ev.id)}
+                                                    className="bg-red-900/50 hover:bg-red-900 text-red-200 border border-red-800"
+                                                >
+                                                    <Trash2 className="w-3 h-3 mr-2" />
+                                                    Delete
+                                                </Button>
+                                            </div>
+                                        )}
+                                    </div>
                                 </PopoverContent>
                             </Popover>
-                        </div>
-
-                        {/* Add Button */}
-                        <div className="mb-[2px]">
-                            <Button onClick={addEvent} className="bg-white text-black hover:bg-neutral-200">Add Event</Button>
-                        </div>
+                        ))}
                     </div>
-                </CardContent>
-            </Card>
-        )
-    }
-
-    {/* Event Path */ }
-    {
-        sortedEvents.length > 0 ? (
-            <div className="w-full h-48 overflow-x-auto border border-white/10 bg-black/50 rounded-lg backdrop-blur-sm custom-scrollbar">
-                <div className="relative min-w-full w-max h-full flex items-center gap-12 px-12 justify-center">
-                    {/* Horizontal path line */}
-                    <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/20 -translate-y-1/2"></div>
-
-                    {sortedEvents.map((ev, idx) => (
-                        <Popover key={ev.id}>
-                            <PopoverTrigger asChild>
-                                <div className="event-dot relative flex flex-col items-center cursor-pointer group z-10 transition-transform hover:scale-110">
-                                    <div className="w-8 h-8 rounded-full bg-black border-2 border-white group-hover:border-violet-400 group-hover:bg-violet-950 mb-3 flex items-center justify-center text-white text-xs font-bold transition-colors">
-                                        {idx + 1}
-                                    </div>
-                                    <span className="text-xs text-neutral-400 group-hover:text-white whitespace-nowrap bg-black/80 px-2 py-1 rounded">{ev.date.toLocaleDateString()}</span>
-                                </div>
-                            </PopoverTrigger>
-                            <PopoverContent className="w-64 bg-zinc-900 border-white/20 text-white p-4">
-                                <div className="flex flex-col gap-2">
-                                    <span className="font-bold text-lg text-violet-300 font-zentry uppercase">{ev.title}</span>
-                                    <span className="text-sm text-neutral-400 border-b border-white/10 pb-2">{ev.date.toDateString()}</span>
-
-                                    {isAdmin && (
-                                        <div className="pt-2 flex justify-end">
-                                            <Button
-                                                variant="destructive"
-                                                size="sm"
-                                                onClick={() => deleteEvent(ev.id)}
-                                                className="bg-red-900/50 hover:bg-red-900 text-red-200 border border-red-800"
-                                            >
-                                                <Trash2 className="w-3 h-3 mr-2" />
-                                                Delete
-                                            </Button>
-                                        </div>
-                                    )}
-                                </div>
-                            </PopoverContent>
-                        </Popover>
-                    ))}
                 </div>
-            </div>
-        ) : (
-            <div className="text-center py-10 text-neutral-600 italic">No events found for this filter.</div>
-        )
-    }
-        )
+            ) : (
+                <div className="text-center py-10 text-neutral-600 italic">No events found for this filter.</div>
+            )}
+        </div>
+    )
 }
