@@ -108,15 +108,20 @@ const PastEventsPage = () => {
                         <span className="block text-xs text-neutral-400 mb-2">16 July 2025</span>
                         Organized to expose students to the latest trends in the technology ecosystem. Industry experts conducted interactive sessions exploring innovation, open-source, and career opportunities.
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <img
-                            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=500"
-                            alt="Learn IT Tour"
+                            src="/img/learn-it-tour-1.jpg"
+                            alt="Learn IT Tour Group"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                         <img
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=500"
-                            alt="Team Session"
+                            src="/img/learn-it-tour-2.jpg"
+                            alt="Session"
+                            className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
+                        />
+                        <img
+                            src="/img/learn-it-tour-3.jpg"
+                            alt="Classroom"
                             className="rounded-lg object-cover h-40 md:h-44 lg:h-60 w-full shadow-lg"
                         />
                     </div>
